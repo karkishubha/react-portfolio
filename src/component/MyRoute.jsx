@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import About from './About';
 import Contact from './Contact';
 import Skills from './Skills';
@@ -12,6 +12,7 @@ import Home from './Home';
 const MyRoute = () => {
   return (
     <>
+    <HashRouter>
       <Routes>
         <Route path="/home" element={<Home></Home>} />
         <Route path="/" element={<About />} />
@@ -22,6 +23,7 @@ const MyRoute = () => {
         <Route path="/resume" element={<Resume />} />
       </Routes>
       <Footer /> {/* Include the Footer here */}
+      </HashRouter>
     </>
   );
 }
